@@ -12,10 +12,11 @@
 # Happy Coding!
 
 service: serverless-email
+configValidationMode: off
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
-frameworkVersion: '2'
+frameworkVersion: "2"
 
 provider:
   name: azure
@@ -28,7 +29,7 @@ provider:
   # type: premium  # premium azure functions
 
   environment: # these will be created as application settings
-    VARIABLE_FOO: 'foo'
+    VARIABLE_FOO: "foo"
 
   # you can define apim configuration here
   # apim:
@@ -67,8 +68,8 @@ package:
   patterns:
     # - '!exclude-me.js'
     # - '!exclude-me-dir/**'
-    - '!local.settings.json'
-    - '!.vscode/**'
+    - "!local.settings.json"
+    - "!.vscode/**"
     # - include-me.js
     # - include-me-dir/**
 
@@ -83,6 +84,14 @@ functions:
 
   goodbye:
     handler: src/handlers/goodbye.sayGoodbye
+    events:
+      - http: true
+        methods:
+          - GET
+        authLevel: anonymous
+
+  email:
+    handler: src/handlers/email.sendEmail
     events:
       - http: true
         methods:

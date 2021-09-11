@@ -10,7 +10,10 @@
     "azure",
     "serverless"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.6",
+    "dotenv": "^10.0.0"
+  },
   "devDependencies": {
     "serverless-azure-functions": "^2.0.0"
   }

@@ -29,6 +29,13 @@ serverless deploy
 
 ## Usage
 The CLI will return you the endpoint of the deployed Azure Function  
+
+The function endpoint is secured using Azure Function Host Key which you can find in the **App Keys** tab of your function on Azure Portal. This needs to be added to the HTTP Request
+
+```bash
+https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>?code=<API_KEY>
+```
+
 You can add **recipient**, **subject** and **text** in the request body to send the email.
 
 

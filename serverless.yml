@@ -80,7 +80,7 @@ functions:
       - http: true
         methods:
           - GET
-        authLevel: anonymous
+        authLevel: admin
         
   # The following are a few examples of other events you can configure:
   # storageBlob:

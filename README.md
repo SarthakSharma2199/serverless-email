@@ -1,3 +1,11 @@
-# Azure Functions
+# serverless-email
+A serverless Azure function to send emails using SendGrid. Built using serverless framework's  serverless-azure-functions.
 
-Refer to [Serverless docs](https://serverless.com/framework/docs/providers/azure/guide/intro/) for more information.
+## Serverless Framework
+https://github.com/serverless/serverless
+## Serverless Azure Plugin
+https://github.com/serverless/serverless-azure-functions
+
+## SendGrid NodeJS Docs
+https://github.com/sendgrid/sendgrid-nodejs
+
